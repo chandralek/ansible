@@ -1,10 +1,11 @@
 #!/bin/bash
 
-echo '{
-    "group": {
-        "hosts": [
-            "172.31.39.146",
-            "172.31.34.32"
+list=$(aws ec2 describe-instances --region us-west-2 --filters "Name=tag:Name,Values=ansible-node" --query "Reservations[*].Instances[*].[PrivateIpAddress]" --output text|xargs |sed 's/[^ ][^ ]*/"&"/g'|sed -e 's/ /,/g')
+
+echo "{
+    \"group\": {
+        \"hosts\": [
+            $list
         ]
     }
-}'
+}"
