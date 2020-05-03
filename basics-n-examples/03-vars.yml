@@ -1,0 +1,8 @@
+- name: Demo on variables
+  hosts: all
+  vars:
+    URL: vars.google.com
+  tasks:
+    - name: Variables defined with var
+      debug:
+        msg: URL = {{URL}}
