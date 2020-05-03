@@ -1,0 +1,7 @@
+- name: Install package
+  hosts: all
+  become: yes
+  tasks:
+    package:
+      name: ngnix
+      state: present
