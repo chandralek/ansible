@@ -1,0 +1,9 @@
+- name: Save output to Variable
+  hosts: all
+  tasks:
+    - shell:  ls -ltr
+      register: out
+
+    - name: Print output
+      debug:
+        msg: Output = "{{out}}"
