@@ -1,0 +1,9 @@
+- name: Demo on filters
+  hosts: all
+  tasks:
+    - shell: uptime
+      register:out
+      
+    - name: print output
+      debug:
+        msg:"{{out}}"
