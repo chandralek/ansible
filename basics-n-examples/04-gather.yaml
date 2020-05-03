@@ -4,4 +4,4 @@
   gather_facts: yes
   tasks:
     - debug:
-        msg: hello {{ansible_hostname}}
+        msg: hello {{ansible_ansible_memory_mb.nocache.free}}
