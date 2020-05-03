@@ -2,8 +2,8 @@
   hosts: all
   tasks:
     - shell: uptime
-      register:out
-      
+      register: out
+
     - name: print output
       debug:
         msg:"{{out}}"
