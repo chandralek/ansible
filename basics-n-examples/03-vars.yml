@@ -1,4 +1,4 @@
-- name: Demo on variables
+- name: Play1
   hosts: all
   vars:
     URL: vars.google.com
@@ -7,11 +7,17 @@
       debug:
         msg: URL = {{URL}}
 
-- name: Demo on variables
+- name: Play2
   hosts: all
+  vars:
+    URL: vars.google.com
   tasks:
     - name: Variables defined with var
       debug:
         msg: URL = {{URL}}
       vars:
-        URL: vars.google.com
+        URL: vars.url.com
+
+    - name: Variables defined with var
+        debug:
+          msg: URL = {{URL}}
