@@ -1,9 +1,9 @@
 - name: Demo on loops
   hosts: all
   tasks:
-    debug:
-      msg: "{{item}}"
-    loop:
-      - Apple
-      - Orange
-      - Mango
+   - debug:
+        msg: "{{item}}"
+     loop:
+       - Apple
+       - Orange
+       - Mango
