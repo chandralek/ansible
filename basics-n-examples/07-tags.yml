@@ -7,7 +7,7 @@
 
       tags:
         - task1
-        
+
     - name: Task2
       debug:
         msg: In Task2
