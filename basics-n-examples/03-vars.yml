@@ -6,3 +6,12 @@
     - name: Variables defined with var
       debug:
         msg: URL = {{URL}}
+
+- name: Demo on variables
+  hosts: all
+  tasks:
+    - name: Variables defined with var
+      debug:
+        msg: URL = {{URL}}
+      vars:
+        URL: vars.google.com
