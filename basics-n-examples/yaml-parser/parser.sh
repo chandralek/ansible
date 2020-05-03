@@ -3,8 +3,8 @@
 YAML_FILE=yaml-parser.yaml
 
 NUMBER_OF_STUDENTS=$(cat $YAML_FILE| yq . | jq '.STUDENT_LIST|length')
-COURSE_NAME=$(cat details.yaml | yq . | jq '.COURSE_NAME')
-TIMING=$(cat details.yaml | yq . | jq '.COURSE_TIMING')
+COURSE_NAME=$(cat $YAML_FILE | yq . | jq '.COURSE_NAME')
+TIMING=$(cat $YAML_FILE | yq . | jq '.COURSE_TIMING')
 
 i=0
 while [ $NUMBER_OF_STUDENTS -gt 0 ]; do
