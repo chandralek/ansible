@@ -1,9 +1,9 @@
 - name: Play1
   hosts: all
-  tasks: Play2
+  tasks:
     - name: Checking ping to play1
       ping:
-- name:
+- name: Play2
   hosts: all
   tasks:
     - name: Checking ping to play2
