@@ -1,0 +1,16 @@
+- name: Demo on tags
+  hosts: all
+  tasks:
+    - name: Task1
+      debug:
+        msg: In Task1
+
+      tags:
+        - task1
+        
+    - name: Task2
+      debug:
+        msg: In Task2
+      tags:
+        - task2
+
