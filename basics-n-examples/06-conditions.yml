@@ -1,0 +1,22 @@
+- name: Demo on conditions
+  hosts: all
+  tasks:
+    - name: Print A
+      when: A is defined
+      debug:
+        msg: A = {{A}}
+
+    - name: Print B
+      when: B is defined
+      debug:
+        msg: B = {{B}}
+
+    - name: Print A and Print B
+      when: B is defined and A is defined
+      debug:
+        msg: A={{A}} ,B = {{B}}
+
+    - name: Print A or Print B
+      when: B is defined or A is defined
+      debug:
+        msg: A={{A}} ,B = {{B}}
