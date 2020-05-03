@@ -17,3 +17,13 @@
         msg: URL = {{URL}}
       vars:
         URL: vars.url.com
+
+- name: Play3
+  hosts: all
+  vars_prompt:
+    - name: URL
+      prompt: Enter URL
+  tasks:
+    - name: Prompt from user
+      debug:
+        msg: URL = {{URL}}
