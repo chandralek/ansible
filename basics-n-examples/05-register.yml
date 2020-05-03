@@ -6,4 +6,4 @@
 
     - name: Print output
       debug:
-        msg: Output = "{{out}}"
+        msg: Output = "{{out.stdout}}"
