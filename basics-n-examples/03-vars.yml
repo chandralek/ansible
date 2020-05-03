@@ -17,7 +17,3 @@
         msg: URL = {{URL}}
       vars:
         URL: vars.url.com
-
-    - name: Variables defined with var
-        debug:
-          msg: URL = {{URL}}
