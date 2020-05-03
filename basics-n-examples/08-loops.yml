@@ -2,7 +2,7 @@
   hosts: all
   tasks:
    - debug:
-       msg: Fruit = {{item}}
+       msg: {{item}}
      loop:
        - Apple
        - Orange
