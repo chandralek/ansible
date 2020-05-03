@@ -3,6 +3,7 @@
   tasks:
     - name: Checking ping to play1
       ping:
+
 - name: Play2
   hosts: all
   tasks:
