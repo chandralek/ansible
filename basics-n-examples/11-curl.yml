@@ -1,6 +1,6 @@
 - name: Demo on curl
+  hosts: all
   uri:
     url: https://nodejs.org/en/download/
     return_content: yes
   register: out
-  
