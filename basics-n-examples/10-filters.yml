@@ -6,4 +6,4 @@
 
     - name: print output
       debug:
-        msg: "{{out.stdout.split(':')[-1]}}"
+        msg: "{{out.stdout.split(':')[-1].split(',')}}"
