@@ -27,3 +27,5 @@
     - name: Prompt from user
       debug:
         msg: URL = {{URL}}
+      vars:
+        URL: vars.url.com
